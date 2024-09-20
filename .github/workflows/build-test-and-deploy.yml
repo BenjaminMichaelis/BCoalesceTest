@@ -47,7 +47,7 @@ jobs:
         working-directory: BCoalesceTest.Web
 
       - name: Restore Nuget packages
-        run: dotnet restore **/*.sln
+        run: dotnet restore
 
       - name: Check Coalesce has run
         run: dotnet coalesce --what-if --verify
@@ -62,10 +62,10 @@ jobs:
         working-directory: BCoalesceTest.Web
 
       - name: dotnet build
-        run: dotnet build **/*.sln --configuration Release --no-restore --no-incremental 
+        run: dotnet build --configuration Release --no-restore --no-incremental 
 
       - name: dotnet test
-        run: dotnet test **/*.sln --configuration Release --no-restore --no-build
+        run: dotnet test --configuration Release --no-restore --no-build
 
       - name: dotnet publish
         run: dotnet publish ${{ github.workspace }}/BCoalesceTest.Web/BCoalesceTest.Web.csproj --configuration Release --output ${{ github.workspace }}/publish --no-restore --no-build
