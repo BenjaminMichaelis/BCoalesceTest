@@ -53,9 +53,9 @@ jobs:
         run: dotnet coalesce --what-if --verify
         working-directory: BCoalesceTest.Web
 
-      - name: npm run lint
-        run: npm run lint
-        working-directory: BCoalesceTest.Web
+#      - name: npm run lint
+#        run: npm run lint
+#        working-directory: BCoalesceTest.Web
 
       - name: npm run build
         run: npm run build

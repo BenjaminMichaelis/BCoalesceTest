@@ -7,7 +7,6 @@
           Coalesce Vue Template
         </router-link>
       </v-toolbar-title>
-
     </v-app-bar>
     <v-navigation-drawer v-model="drawer">
       <v-list>
@@ -37,12 +36,10 @@
 </template>
 
 <script setup lang="ts">
-
 const drawer = ref<boolean | null>(null);
 
 const router = useRouter();
 const { userInfo } = useUser();
-
 </script>
 
 <style lang="scss">

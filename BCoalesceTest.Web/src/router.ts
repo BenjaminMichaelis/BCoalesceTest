@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import {
-  CAdminEditorPage,
-  CAdminTablePage,
-} from "coalesce-vue-vuetify3";
+import { CAdminEditorPage, CAdminTablePage } from "coalesce-vue-vuetify3";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -43,9 +40,7 @@ const router = createRouter({
  *  coalesce admin page component and pass it to `useTitle`.
  */
 function titledAdminPage<
-  T extends
-    | typeof CAdminTablePage
-    | typeof CAdminEditorPage
+  T extends typeof CAdminTablePage | typeof CAdminEditorPage,
 >(component: T) {
   return defineComponent({
     setup() {
@@ -62,6 +57,5 @@ function titledAdminPage<
     },
   });
 }
-
 
 export default router;
