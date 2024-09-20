@@ -1,0 +1,16 @@
+{
+  "webProject": {
+    "projectFile": "./BCoalesceTest.Web/BCoalesceTest.Web.csproj"
+  },
+  "dataProject": {
+    "projectFile": "./BCoalesceTest.Data/BCoalesceTest.Data.csproj"
+  },
+
+  "rootGenerator": "Vue",
+
+  "generatorConfig": {
+    "Scripts": {
+      "targetDirectory": "../src"
+    }
+  }
+}
